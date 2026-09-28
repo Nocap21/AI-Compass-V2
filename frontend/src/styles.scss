@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light;
+  --color-background: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-primary: #243b80;
+  --color-primary-dark: #172554;
+  --color-accent: #6878e8;
+  --color-text: #172033;
+  --color-muted: #687386;
+  --color-border: #e4e8f0;
+  --color-soft: #eef2ff;
+  --shadow-card: 0 12px 32px rgb(25 39 77 / 7%);
+  --shadow-card-hover: 0 20px 44px rgb(25 39 77 / 12%);
+  --radius-card: 1.25rem;
+  --radius-control: 0.75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(104 120 232 / 55%);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #dce3ff;
+  color: var(--color-primary-dark);
+}

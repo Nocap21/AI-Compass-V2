@@ -1,0 +1,26 @@
+.login-page { display: flex; width: min(100% - 2rem, 480px); min-height: calc(100vh - 76px); flex-direction: column; justify-content: center; margin: 0 auto; padding: 3rem 0; }
+.login-intro { margin-bottom: 1.5rem; text-align: center; }
+.login-mark { display: grid; width: 3rem; height: 3rem; place-items: center; margin: 0 auto 1rem; border-radius: 1rem; background: linear-gradient(145deg, #344eaa, #7886f1); box-shadow: 0 9px 20px rgb(64 83 179 / 22%); color: #fff; font-size: 1.65rem; }
+.eyebrow { margin: 0 0 0.35rem; color: var(--color-primary); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; }
+.login-intro h1 { margin: 0; color: var(--color-primary-dark); font-size: 2.1rem; letter-spacing: -0.05em; }
+.intro-copy { margin: 0.45rem 0 0; color: var(--color-muted); }
+.login-card { padding: 2rem; border: 1px solid var(--color-border); border-radius: 1.25rem; background: var(--color-surface); box-shadow: var(--shadow-card); }
+.card-heading h2 { margin: 0; color: var(--color-text); font-size: 1.2rem; letter-spacing: -0.025em; }
+.card-heading p { margin: 0.3rem 0 1.5rem; color: var(--color-muted); font-size: 0.9rem; }
+.form-fields { display: grid; gap: 1.1rem; }
+.form-field { display: grid; gap: 0.45rem; }
+.form-field label { color: #384357; font-size: 0.85rem; font-weight: 650; }
+.form-field input { width: 100%; min-height: 3rem; padding: 0.7rem 0.85rem; border: 1px solid var(--color-border); border-radius: 0.7rem; background: #fff; color: var(--color-text); transition: border-color 160ms ease, box-shadow 160ms ease; }
+.form-field input::placeholder { color: #9aa3b2; }
+.form-field input:focus { border-color: #8491e8; box-shadow: 0 0 0 4px rgb(104 120 232 / 12%); outline: none; }
+.login-button { min-height: 3rem; margin-top: 0.2rem; border: 0; border-radius: 0.7rem; background: linear-gradient(135deg, #2e468f, #596dd0); box-shadow: 0 8px 18px rgb(45 67 149 / 18%); color: #fff; cursor: pointer; font-weight: 700; transition: transform 160ms ease, box-shadow 160ms ease; }
+.login-button:hover { transform: translateY(-1px); box-shadow: 0 11px 22px rgb(45 67 149 / 24%); }
+.signup-prompt { margin: 1.4rem 0 0; color: var(--color-muted); font-size: 0.88rem; text-align: center; }
+.signup-link { padding: 0; border: 0; background: transparent; color: var(--color-primary); cursor: pointer; font: inherit; font-weight: 700; text-decoration: none; }
+.signup-link:hover { text-decoration: underline; }
+.login-note { margin: 0.9rem 0 0; color: #939cad; font-size: 0.76rem; text-align: center; }
+
+@media (max-width: 480px) {
+  .login-page { min-height: calc(100vh - 68px); padding: 2rem 0; }
+  .login-card { padding: 1.5rem; }
+}

@@ -1,0 +1,116 @@
+.navbar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid rgb(228 232 240 / 85%);
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(14px);
+}
+
+.navbar-inner {
+  display: flex;
+  width: min(100% - 3rem, 1180px);
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  place-items: center;
+  border-radius: 0.7rem;
+  background: linear-gradient(145deg, #344eaa, #7886f1);
+  box-shadow: 0 5px 12px rgb(64 83 179 / 25%);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.brand-version {
+  color: var(--color-muted);
+  font-weight: 550;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.navbar-links a {
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.7rem;
+  color: var(--color-muted);
+  font-size: 0.93rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.is-active {
+  background: var(--color-soft);
+  color: var(--color-primary);
+}
+
+.navbar-links a.login-link {
+  margin-left: 0.45rem;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.navbar-links a.login-link:hover,
+.navbar-links a.login-link.is-active {
+  background: var(--color-primary-dark);
+  box-shadow: 0 5px 14px rgb(36 59 128 / 20%);
+}
+
+@media (max-width: 560px) {
+  .navbar-inner {
+    width: min(100% - 1.5rem, 1180px);
+    min-height: 68px;
+  }
+
+  .navbar-brand {
+    gap: 0.45rem;
+    font-size: 0.9rem;
+  }
+
+  .brand-mark {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .navbar-links {
+    gap: 0.1rem;
+  }
+
+  .navbar-links a {
+    padding: 0.5rem 0.55rem;
+    font-size: 0.8rem;
+  }
+
+  .navbar-links a.login-link {
+    margin-left: 0.15rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar-brand { gap: 0.35rem; font-size: 0.75rem; }
+  .brand-mark { width: 1.75rem; height: 1.75rem; }
+  .navbar-links a { padding: 0.45rem 0.38rem; font-size: 0.7rem; }
+  .navbar-links a.login-link { margin-left: 0.05rem; }
+}

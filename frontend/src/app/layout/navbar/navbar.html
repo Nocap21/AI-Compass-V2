@@ -1,0 +1,14 @@
+<nav class="navbar" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a class="navbar-brand" routerLink="/" aria-label="AI Compass V2 home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>AI Compass <span class="brand-version">V2</span></span>
+    </a>
+
+    <div class="navbar-links">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">Home</a>
+      <a routerLink="/ai-tools" routerLinkActive="is-active" ariaCurrentWhenActive="page">AI Tools</a>
+      <a class="login-link" routerLink="/login" routerLinkActive="is-active" ariaCurrentWhenActive="page">Login</a>
+    </div>
+  </div>
+</nav>

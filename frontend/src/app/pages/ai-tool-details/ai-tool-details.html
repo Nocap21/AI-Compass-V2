@@ -1,0 +1,39 @@
+<section class="tool-details">
+  <a class="back-link" routerLink="/ai-tools"><span aria-hidden="true">←</span> Back to AI Tools</a>
+
+  @if (tool) {
+    <article class="tool-profile">
+      <div class="profile-heading">
+        <span class="tool-mark" aria-hidden="true">{{ tool.name.charAt(0) }}</span>
+        <span class="tool-category">{{ tool.category }}</span>
+      </div>
+      <p class="eyebrow">AI TOOL PROFILE</p>
+      <h1>{{ tool.name }}</h1>
+      <p class="description">{{ tool.description }}</p>
+
+      <div class="profile-information">
+        <h2>About this tool</h2>
+        <p>AI Compass helps you discover this platform. Visit its official website to learn more and use the tool.</p>
+      </div>
+
+      <div class="profile-actions">
+        <a
+          class="official-link"
+          [href]="tool.officialUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Official Website <span aria-hidden="true">↗</span>
+        </a>
+        <a class="secondary-link" routerLink="/ai-tools">Back to AI Tools</a>
+      </div>
+    </article>
+  } @else {
+    <div class="not-found">
+      <span class="not-found-mark" aria-hidden="true">?</span>
+      <h1>AI tool not found</h1>
+      <p>We couldn't find a tool with that ID. Return to the directory to explore available tools.</p>
+      <a class="official-link" routerLink="/ai-tools">Back to AI Tools</a>
+    </div>
+  }
+</section>
